@@ -57,6 +57,8 @@ the response.
 
 The default filter function uses the [compressible](https://www.npmjs.com/package/compressible)
 module to determine if `res.getHeader('Content-Type')` is compressible.
+If you are using response.write(), which does not automatically set the `Content-Type` header,
+`compressible` will consider the response uncompressible unless you explicitly set the `Content-Type`.
 
 ##### level
 
